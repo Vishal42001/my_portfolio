@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Kumar Singh - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #673ab7; /* Deep Purple */
+            --secondary-color: #03a9f4; /* Light Blue */
+            --dark-color: #212121; /* Dark Grey */
+            --light-color: #f5f5f5; /* Light Grey */
+            --accent-color: #ff9800; /* Orange */
+        }
+
+        body {
+            background-color: var(--dark-color); /* Dark background */
+            color: var(--light-color); /* Light text */
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color); /* Deep Purple */
+            color: var(--light-color);
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .contact-info a {
+            color: var(--light-color);
+            text-decoration: none;
+            transition: color 0.3s;
+            margin-right: 10px;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color); /* Orange on hover */
+        }
+
+        h2 {
+            color: var(--secondary-color); /* Light Blue */
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color); /* Orange */
+        }
+
+        section {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-item {
+            background-color: var(--primary-color); /* Deep Purple */
+            color: var(--light-color);
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            background-color: var(--secondary-color); /* Light Blue on hover */
+        }
+
+        .project-card {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--secondary-color); /* Light Blue */
+        }
+
+        ul li::before {
+            content: '✔';
+            color: var(--accent-color); /* Orange */
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1>Vishal Kumar Singh</h1>
+            <div class="contact-info">
+                <a href="tel:+917717783089"><i class="fas fa-phone"></i> +91-7717783089</a>
+                <a href="mailto:k.vishal42001@gmail.com"><i class="fas fa-envelope"></i> k.vishal42001@gmail.com</a>
+                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Education Section -->
+        <section>
+            <h2>Education</h2>
+            <div class="timeline-item">
+                <h3>Silicon Institute of Technology, Bhubaneswar</h3>
+                <p>Bachelor of Technology in Computer Engineering</p>
+                <p>June 2021 - Present</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Python</div>
+                <div class="skill-item">Data Analytics</div>
+                <div class="skill-item">Data Visualization</div>
+                <div class="skill-item">Power BI</div>
+                <div class="skill-item">Flask</div>
+                <div class="skill-item">Docker</div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section>
+            <h2>Internships</h2>
+            <div class="timeline-item">
+                <h3>Microsoft Azure Fundamentals Intern</h3>
+                <p>SiliconTech</p>
+                <p>June 2023 – July 2023</p>
+            </div>
+            <div class="timeline-item">
+                <h3>AWS Devops Intern</h3>
+                <p>Ingenious TechWorld</p>
+                <p>June 2024 - July 2024</p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section>
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>System Health Monitor App</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">Flask</span>
+                        <span class="tech-pill">Docker</span>
+                        <span class="tech-pill">psutil</span>
+                    </div>
+                    <p>Real-time system health monitoring web app with threshold alerts and Docker deployment.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Weather Application</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">Flask</span>
+                        <span class="tech-pill">OpenWeather API</span>
+                    </div>
+                    <p>Global weather tracking application with real-time updates and error handling.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Sales Dashboard In Power-BI</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">Power BI</span>
+                        <span class="tech-pill">DAX</span>
+                        <span class="tech-pill">Data Analysis</span>
+                    </div>
+                    <p>Interactive sales analysis dashboard with drill-down capabilities and trend visualization.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section>
+            <h2>Certifications</h2>
+            <ul>
+                <li>Foundations: Data Everywhere - Coursera</li>
+                <li>Foundations of Data Science - Coursera</li>
+                <li>The Joy of Computing Using Python – NPIEL</li>
+                <li>AWS Devops - SiliconTech</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
